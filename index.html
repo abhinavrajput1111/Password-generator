@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- for copy font -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- --------------------------------------- -->
+  </head>
+  <body>
+    <div id="wrapper" class="w-screen h-screen">
+      <div id="box">
+        <div id="heading" class="heading py-3 w-screen">
+          <h2
+            class="text-4xl font-semibold text-center mt-5 text-white drop-shadow-xl"
+          >
+            Password Generator
+          </h2>
+        </div>
+
+        <div id="content" class="content mt-20">
+          <div class="flex justify-center">
+            <div
+              id="output"
+              class="output md:w-[90%] w-full h-12 px-10 ml-5 bg-gray-200"
+            ></div>
+            <div
+              id="copy-btn"
+              class="bg-blue-900 hover:bg-blue-600 cursor-pointer md:w-[10%] w-[30%] mr-5 mx-auto flex justify-center items-center text-white"
+            >
+              <i class="fa-solid fa-copy text-3xl"></i>
+            </div>
+          </div>
+
+          <!-- div password para and length input -->
+
+          <div class="md:flex block justify-between items-center mt-10 mx-10">
+            <p class="md:mb-2 mb-5 w-full">
+              Select Password length<b>(**8-50 characters**)</b>
+            </p>
+            <input
+              type="number"
+              placeholder="Enter Length of Password"
+              class="border border-blue-500 w-52 pl-2 hover:border-red-500"
+              id="length"
+              value="8"
+              min="8"
+            />
+          </div>
+
+          <!-- cheeckboxes div -->
+
+          <div class="px-10 mt-10">
+            <input
+              type="checkbox"
+              name="upper_case"
+              id="upper_case"
+              class="mr-3"
+            />
+            <label for="upper_case">Include upper case</label>
+
+            <br />
+            <input
+              type="checkbox"
+              name="lower_case"
+              id="lower_case"
+              class="mr-3"
+            />
+            <label for="lower_case">Include lower case</label>
+
+            <br />
+            <input type="checkbox" name="numbers" id="numbers" class="mr-3" />
+            <label for="numbers">Include Numbers</label>
+
+            <br />
+            <input
+              type="checkbox"
+              name="Special_Characters"
+              id="Special_Characters"
+              class="mr-3"
+            />
+            <label for="Special_Characters">Include Special Characters</label>
+          </div>
+
+          <div class="w-full flex justify-center items-center">
+            <button
+              class="button_generate w-[60%] mx-10 h-8 bg-blue-950 hover:bg-blue-600 text-white text-lg font-semibold mt-10 md:mb-10 mb-10 #D8B5FF → #1EAE98"
+              id="button"
+            >
+              Generate Password
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script files -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
